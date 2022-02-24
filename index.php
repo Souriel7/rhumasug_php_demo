@@ -11,7 +11,7 @@ var_dump($_SESSION);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="./js/main.js"></script>
+    <script type="module" defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -22,6 +22,7 @@ var_dump($_SESSION);
 
     <main>
         <?php
+        // unset($_SESSION["panier"]);
         if (isset($_GET["page"])) {
             if (file_exists("php/pages/" . $_GET["page"] . ".php")) {
                 include "php/pages/" . $_GET["page"] . ".php";
